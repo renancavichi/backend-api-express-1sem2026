@@ -1,0 +1,32 @@
+{
+  "name": "backend-api-express",
+  "version": "1.0.0",
+  "description": "Backend API com Express, Prisma ORM e Zod",
+  "keywords": [
+    "api",
+    "express",
+    "prisma",
+    "zod",
+    "mvc",
+    "middlewares"
+  ],
+  "homepage": "https://github.com/renancavichi/backend-api-express-1sem2026#readme",
+  "bugs": {
+    "url": "https://github.com/renancavichi/backend-api-express-1sem2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renancavichi/backend-api-express-1sem2026.git"
+  },
+  "license": "ISC",
+  "author": "Renan Cavichi",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
