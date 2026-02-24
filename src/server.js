@@ -5,9 +5,13 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send("Olá Mundo Express API!")
+})
+
+app.get('/user', (req, res) => {
+  res.send("Aqui está a lista de usuários!")
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Servidor rondando em http://localhost:${port}`)
 })
