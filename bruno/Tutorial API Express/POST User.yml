@@ -1,0 +1,15 @@
+info:
+  name: POST User
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/user
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
