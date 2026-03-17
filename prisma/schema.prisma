@@ -14,3 +14,4 @@ model user {
   email  String @unique
   pass   String @db.VarChar(300)
 }
+
