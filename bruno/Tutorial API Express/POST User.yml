@@ -4,8 +4,17 @@ info:
   seq: 1
 
 http:
-  method: GET
+  method: POST
   url: http://localhost:3000/user
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Renan Teste",
+        "email": "renanteste@gmail.com",
+        "pass": "123Teste",
+        "avatar": "https://github.com/renancavichi.png"
+      }
   auth: inherit
 
 settings:
