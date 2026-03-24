@@ -36,3 +36,6 @@ Gera o schema do prisma a partir do banco de dados
 Gerar as funções para interagir com os modelos mapeados no schema
 - npx prisma generate
 
+## Links
+
+[![Hypercommit](https://img.shields.io/badge/Hypercommit-DB2475)](https://hypercommit.com/backend-api-express-1sem2026)
