@@ -1,0 +1,21 @@
+info:
+  name: PATCH User Avatar
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: http://localhost:3000/user/1
+  body:
+    type: json
+    data: |-
+      {
+        "avatar": "http://github.com/renan.png"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
