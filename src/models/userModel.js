@@ -17,3 +17,10 @@ export const getUsers = async () => {
     return await prisma.user.findMany()
 }
   
+export const deleteUser = async (id) => {
+    return await prisma.user.delete({
+        where: {
+            id
+        }
+    })
+}
