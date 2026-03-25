@@ -18,9 +18,9 @@
 - Como utilizar parâmetros de Url?
 - O que é Middleware? (Exemplo Logger)
 
----------
+--------- Próximos Tópicos
 
-- Validação de Dados
+- Validação de Dados com Zod
 - Tratamento de Erros
 - Autenticação com JWT
 
