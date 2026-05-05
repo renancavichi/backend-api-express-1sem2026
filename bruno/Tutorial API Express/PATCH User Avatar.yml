@@ -10,7 +10,8 @@ http:
     type: json
     data: |-
       {
-        "avatar": "http://github.com/renan.png"
+        "avatar": "github.com/renan.png",
+        "name": "A"
       }
   auth: inherit
 
