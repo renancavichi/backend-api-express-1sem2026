@@ -21,6 +21,9 @@
 --------- Próximos Tópicos
 
 - Validação de Dados com Zod
+  - Para que serve a biblioteca do Zod?
+  - Para que serve a função Partial?
+  - Qual a diferença do parse para o safeParse?
 - Tratamento de Erros
 - Autenticação com JWT
 

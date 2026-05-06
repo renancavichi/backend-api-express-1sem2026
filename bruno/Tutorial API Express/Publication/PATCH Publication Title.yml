@@ -1,0 +1,22 @@
+info:
+  name: PATCH Publication Title
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: http://localhost:3000/user/1
+  body:
+    type: json
+    data: |-
+      {
+        "avatar": "http://github.com/renan.png",
+        "name": "A"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

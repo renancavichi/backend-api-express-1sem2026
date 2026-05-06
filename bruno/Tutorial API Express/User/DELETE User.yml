@@ -1,0 +1,15 @@
+info:
+  name: DELETE User
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: http://localhost:3000/user/10
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
