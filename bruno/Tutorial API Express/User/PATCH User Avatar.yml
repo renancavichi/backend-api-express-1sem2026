@@ -5,13 +5,12 @@ info:
 
 http:
   method: PATCH
-  url: http://localhost:3000/user/1
+  url: http://localhost:3000/user/4
   body:
     type: json
     data: |-
       {
-        "avatar": "http://github.com/renan.png",
-        "name": "A"
+        "avatar": "http://github.com/renan.png"
       }
   auth: inherit
 

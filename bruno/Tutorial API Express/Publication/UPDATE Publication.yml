@@ -5,15 +5,14 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:3000/user/1
+  url: http://localhost:3000/publication/2
   body:
     type: json
     data: |-
       {
-        "name": "Renan C.",
-        "email": "renanc@gmail.com",
-        "pass": "1234Teste",
-        "avatar": "https://github.com/renancavichi.png"
+        "title": "Uma Super Nova Matéria",
+        "description": "Algo super interessante",
+        "author": "Renan"
       }
   auth: inherit
 

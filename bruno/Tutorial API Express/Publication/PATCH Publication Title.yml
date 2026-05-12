@@ -5,13 +5,12 @@ info:
 
 http:
   method: PATCH
-  url: http://localhost:3000/user/1
+  url: http://localhost:3000/publication/title/2
   body:
     type: json
     data: |-
       {
-        "avatar": "http://github.com/renan.png",
-        "name": "A"
+        "title": "Uma Hiper Nova Matéria"
       }
   auth: inherit
 
