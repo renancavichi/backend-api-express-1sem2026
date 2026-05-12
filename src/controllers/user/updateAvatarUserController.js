@@ -1,6 +1,7 @@
 import { updateUser, validateUser } from "../../models/userModel.js";
 
-export async function updateAvatarUsersController(req, res){
+export async function updateAvatarUsersController(req, res, next){
+    try{
         const {id} = req.params
         const user = req.body
     
@@ -19,4 +20,13 @@ export async function updateAvatarUsersController(req, res){
             message: "Avatar atualizado com sucesso!",
             user: result
         })
+    }catch(error) {
+        if(error.code === 'P2025'){
+            console.log(error.message)
+            return res.status(404).json({
+                message: `Usuário não encontrado para ser atualizado.`
+            })
+        }
+        next(error)
+    }
 }

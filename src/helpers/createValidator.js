@@ -1,8 +1,6 @@
 import { flattenError } from "zod"
 
 export const createValidator = (schema) => {
-   
-   
     const validator = (data, partial) => {
         let result 
         if (partial) {
@@ -22,8 +20,5 @@ export const createValidator = (schema) => {
             data: validatedData
         }
     }
-
-
-    
     return validator
 }
