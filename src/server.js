@@ -4,6 +4,7 @@ import userRouter from './routers/userRouter.js'
 import publicationRouter from './routers/publicationRouter.js'
 import { logger } from './middlewares/logger.js'
 import { errorHandler } from './middlewares/errorHandler.js'
+import { error404 } from './middlewares/error404.js'
 
 const app = express()
 const port = 3000
@@ -12,12 +13,13 @@ app.use(logger)
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.send("Olá Mundo Express API!")
+  res.json({ message: "Olá Mundo Express API!" })
 })
 
 app.use('/user', userRouter)
 app.use('/publication', publicationRouter)
 
+app.use(error404)
 app.use(errorHandler)
 
 app.listen(port, () => {
