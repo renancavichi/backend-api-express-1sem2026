@@ -1,4 +1,5 @@
 import { createUser, validateUser  } from "../../models/userModel.js"
+import bcrypt from "bcrypt"
 
 export async function createUsersController(req, res, next){
     try{
@@ -13,6 +14,7 @@ export async function createUsersController(req, res, next){
             })
         }
 
+        data.pass = await bcrypt.hash(data.pass, 10)
         const result = await createUser(data)
         
         return res.json({
