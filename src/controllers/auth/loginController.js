@@ -36,15 +36,13 @@ export async function loginController(req, res, next){
         const refreshToken = uuidv4()
 
         const session = await createSession(user.id, refreshToken)
-
-        console.log(session)
-
         if(!session){
             return res.status(500).json({
                 message: "Erro ao criar sessão. Por favor tente novamente mais tarde."
             })
         }
        
+        res.cookie('refreshToken', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 6 * 30 * 24 * 60 * 60 * 1000 })
         return res.json({
             message: "Login realizado com sucesso!",
             user: {

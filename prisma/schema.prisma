@@ -13,7 +13,7 @@ model user {
   name   String @db.VarChar(255)
   email  String @unique
   pass   String @db.VarChar(300)
-  
+
   sessions session[]
 }
 
@@ -27,7 +27,7 @@ model publication {
 model session {
   id        Int      @id @default(autoincrement())
   userId    Int
-  token     String   @db.VarChar(500)
+  token     String   @unique @db.VarChar(500)
   createdAt DateTime @default(now())
 
   user user @relation(fields: [userId], references: [id])

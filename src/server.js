@@ -6,11 +6,13 @@ import authRouter from './routers/authRouter.js'
 import { logger } from './middlewares/logger.js'
 import { errorHandler } from './middlewares/errorHandler.js'
 import { error404 } from './middlewares/error404.js'
+import cookieParser from 'cookie-parser'
 
 const app = express()
 const port = 3333
 
 app.use(logger)
+app.use(cookieParser())
 app.use(express.json())
 
 app.get('/', (req, res) => {
