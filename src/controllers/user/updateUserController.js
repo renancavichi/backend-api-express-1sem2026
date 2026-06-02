@@ -1,10 +1,17 @@
 import { updateUser, validateUser } from "../../models/userModel.js";
+import bcrypt from "bcrypt";
 
 export async function updateUsersController(req, res, next){
     try{
         const {id} = req.params
         const user = req.body
         user.id = +id
+        
+        if(req.userId !== user.id){
+            return res.status(403).json({
+                message: "Acesso negado. Você só pode atualizar seu próprio perfil."
+            })
+        }
 
         const {success, error, data: userValidated} = validateUser(user)
         if(!success){
@@ -13,7 +20,9 @@ export async function updateUsersController(req, res, next){
                 fieldErrors: error
             })
         }
-
+        if(user.pass){
+            userValidated.pass = await bcrypt.hash(user.pass, 10)
+        }
         const result = await updateUser(userValidated, userValidated.id)
         return res.json({
             message: "Usuário atualizado com sucesso!",

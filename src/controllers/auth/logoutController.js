@@ -10,7 +10,8 @@ export async function logoutController(req, res, next){
                 message: "RefreshToken não fornecido."
             })
         }
-        const result = await deleteSession(token, userId)
+        
+        await deleteSession(token, userId)
 
         res.clearCookie('refreshToken', { httpOnly: true, sameSite: 'None', secure: true })
 
