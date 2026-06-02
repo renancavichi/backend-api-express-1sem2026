@@ -5,15 +5,15 @@ info:
 
 http:
   method: POST
-  url: http://localhost:3000/user
+  url: http://localhost:3333/user
   body:
     type: json
     data: |-
       {
-        "name": "Alex"
-        "email": "alex@gmail.com",
-        "pass": "123Teste",
-        "avatar": "https://github.com/alex.png"
+        "name": "renan2",
+        "email": "renan2@gmail.com",
+        "pass": "123123",
+        "avatar": "https://github.com/renancavichi.png"
       }
   auth: inherit
 

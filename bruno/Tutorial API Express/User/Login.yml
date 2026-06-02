@@ -1,0 +1,22 @@
+info:
+  name: Login
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:3333/auth/login
+  body:
+    type: json
+    data: |-
+      {
+        "email": "renan@gmail.com",
+        "pass": "123123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

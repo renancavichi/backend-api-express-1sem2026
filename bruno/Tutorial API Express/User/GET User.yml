@@ -1,0 +1,17 @@
+info:
+  name: GET User
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: http://localhost:3333/user/16
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImlhdCI6MTc3OTgxODA0MSwiZXhwIjoxNzc5OTA0NDQxfQ.a9qXUAJlXxg_JapSgqT9hjwZfQOJkfh8y3_Ij-7EI2U
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
