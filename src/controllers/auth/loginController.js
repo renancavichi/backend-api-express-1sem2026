@@ -16,8 +16,6 @@ export async function loginController(req, res, next){
             })
         }
 
-        console.log(data)
-
         const user = await getUserByEmail(data.email)
         if(!user){
             return res.status(401).json({
